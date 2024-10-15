@@ -1,8 +1,9 @@
 import ContactsTable from "../components/contacts/table/ContactsTable";
 // import ContactsFormsv1 from "../components/contacts/forms/ContactsFormsv1";
-import ContactsFormv2 from "../components/contacts/forms/ContactsFormv2";
+// import ContactsFormv2 from "../components/contacts/forms/ContactsFormv2";
 import { useState } from "react";
 import { useEffect } from "react";
+import ContactsFormv3 from "../components/contacts/forms/ContactsFormv3";
 
 const contactosEnLs = JSON.parse(localStorage.getItem("contactos")) || [];
 
@@ -16,7 +17,8 @@ const ContactsView = () => {
       <h1>Cargar contacto</h1>
       <hr />
       {/* <ContactsFormsv1 contactos={contactos} setContactos={setContactos} /> */}
-      <ContactsFormv2 contactos={contactos} setContactos={setContactos} />
+      {/* <ContactsFormv2 contactos={contactos} setContactos={setContactos} /> */}
+      <ContactsFormv3 contactos={contactos} setContactos={setContactos} />
       <ContactsTable contactos={contactos} setContactos={setContactos} />
     </>
   );
